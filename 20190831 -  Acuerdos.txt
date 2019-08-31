@@ -1,0 +1,37 @@
+20190831 -  Acuerdos
+
+
+- Duracion en minutos y filtrada
+- days_since_published
+- analizar speaker_ocupation 
+- event class
+- published data -> dia de la semana y mes
+- formular alguna hipotesis sobre el feature languages:
+  - Más views significa una traducción a más lenguajes?
+- analizar num_speaker
+
+posiblidades a futuro:
+- Usar speaker y cruzar su información con twitter y otras redes sociales
+- Analizar relación entre charlas (efecto red)
+
+
+
+Metodología hasta ahora:
+- Exploración de datos
+- Research sobre el dominio
+- Limpieza de datos
+- Preprocesamiento de datos (generar features)
+- Exploración inicial de modelos
+
+
+Resultados primeros modelos
+loss - mae - mse
+
+Model sin title-description words: [0.0015330498645483863, 0.4586951307221955, NA]
+
+[D256, dout(0.25), D128. D64. D1] => [0.6897814245784983, 0.6223708391189575, 0.6897814245784983]
+
+[D256(l2(0.01)), dout(0.25), D128, D128, D64, D1] => [0.7989166661804797, 0.4790968841197444, 0.3790423447010564]
+
+Otras notas:
+si pasamos el target al logaritmo entrenemos con el MSE después
